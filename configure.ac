@@ -38,6 +38,8 @@ AX_COMPILER_VERSION
 dnl We want C++11 unconditionally
 AX_CXX_COMPILE_STDCXX([11], [noext], [mandatory])
 
+AC_C_BIGENDIAN
+
 AS_IF([test "x${enable_flags_setting}" = "xyes" && test "x${enable_debug}" = "xno"], [
     AC_LANG([C])
     AX_APPEND_COMPILE_FLAGS([-O2 -pipe], [CFLAGS])
